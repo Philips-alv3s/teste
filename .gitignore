@@ -1,0 +1,12 @@
+# python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.pyc
+# Vs code
+.vccpde/
+# Ambientes Vistuais
+venv/
+env/
+
