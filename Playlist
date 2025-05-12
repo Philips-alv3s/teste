@@ -1,0 +1,25 @@
+playlist = []
+while True:
+    print("\n1. adiocionar musica\n2. retirar musica \n3. Ver Playlist\n4. Sair")
+    opcao = input("escolha uma opcao: ")
+    if opcao == "1":
+        musica = str(input("Digite uma musica: ")).lower()
+        if musica in playlist:
+            print("não pode adicionar a mesma musica.")
+        else:
+            playlist.append(musica)
+    elif opcao == "2":
+        for i, musica in enumerate(playlist, 1):
+            print(f"{i}. {musica}")
+            excluir = input("qual musica deseja excluir?: ")
+            if excluir == musica:
+                playlist.pop(excluir-1)
+                print("musica tirada com sucesso!")
+            else:
+                print("ERRO: TENTE DNV.")
+    elif opcao == "3":
+        print("Musicas:", playlist)
+    elif opcao == "4":
+        break
+    else:
+        print("Opção inválida.")
